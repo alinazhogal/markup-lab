@@ -1,6 +1,6 @@
-import './assets/styles.scss'
+import './styles.scss'
 
-const teamSectionTemplate = require('./assets/team-section/team-section.handlebars')
+const teamSectionTemplate = require('./components/team-section/team-section.handlebars')
 
 document.addEventListener('DOMContentLoaded', () => {
     // Team Section component start
