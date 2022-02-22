@@ -6,18 +6,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.createElement('header')
     header.innerHTML = headerTemplate({
         sectionName: [
-            { name: 'Home' },
-            { name: 'Product' },
-            { name: 'Pricing' },
-            { name: 'Contact' },
+            { name: 'Home', url: '/home' },
+            { name: 'Product', url: '/product' },
+            { name: 'Pricing', url: '/pricing' },
+            { name: 'Contact', url: '/contact' },
         ],
     })
-    header.classList.add('header')
     document.body.append(header)
     const search = document.querySelector('.nav-input')
     const searchButton = document.querySelector('.search-button')
 
     searchButton.addEventListener('click', () => {
-        search.classList.toggle('display')
+        search.classList.toggle('open')
+    })
+    document.addEventListener('click', (e) => {
+        const withinBoundaries = e.composedPath().includes(searchButton)
+        if (!withinBoundaries) {
+            search.classList.remove('open')
+        }
     })
 })

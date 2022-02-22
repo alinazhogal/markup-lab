@@ -13,8 +13,13 @@ nav {
             font-size: 14px;
             color: $white;
             text-decoration: none;
+            transition: 300ms ease-out;
+        }
+        li a:hover {
+            color: $hover-color;
         }
     }
+
     .nav-buttons {
         padding-left: 39px;
         @include flex();
@@ -26,10 +31,13 @@ nav {
             cursor: pointer;
         }
     }
+    .nav-buttons:hover {
+        fill: $hover-color;
+    }
 }
 
 .search-button {
-    padding-right: 18px;
+    padding-right: 30px;
 }
 
 .nav-input {
@@ -39,8 +47,12 @@ nav {
     padding: 0 8px;
     @include font($fw: 500);
     display: none;
+    transition: 500ms ease-out;
+    opacity: 0;
 }
 
-.display {
+.open {
+    transition: 300ms ease-out;
     display: block;
+    opacity: 1;
 }
