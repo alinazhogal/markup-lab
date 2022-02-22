@@ -1,1 +1,9 @@
 @use './components/team-section/team-section';
+
+@use './components/header/header';
+@use './components/nav/nav';
+@use './components/logo/logo';
+
+* {
+    box-sizing: border-box;
+}

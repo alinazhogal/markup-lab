@@ -1,0 +1,16 @@
+@import '../../style-rules';
+
+.header-container {
+    @include flex($ai: center, $jc: space-between);
+    width: 1322px;
+    height: 58px;
+    padding: 0 164px;
+    background-color: $primary-color;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
