@@ -1,0 +1,13 @@
+$primary-color: #252b42;
+$white: #fff;
+
+@mixin flex($jc: space-between, $ai: center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin font($ff: Montserrat, $fw: 500) {
+    font-family: $ff;
+    font-weight: $fw;
+}

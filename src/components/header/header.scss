@@ -1,13 +1,16 @@
+@import '../../style-rules';
+
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1022px;
+    @include flex($ai: center, $jc: space-between);
+    width: 1322px;
     height: 58px;
     padding: 0 164px;
+    background-color: $primary-color;
 }
 
 header {
-    display: flex;
-    justify-content: center;
+    @include flex($ai: center, $jc: center);
+    position: fixed;
+    top: 0;
+    left: 100px;
 }

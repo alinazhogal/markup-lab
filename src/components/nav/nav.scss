@@ -1,39 +1,46 @@
+@import '../../style-rules';
+
 nav {
+    display: flex;
     .nav-list {
-        display: flex;
-        justify-content: space-between;
+        @include flex();
         list-style: none;
         padding: 0;
         width: 280px;
 
         li a {
+            @include font($fw: 600);
             font-size: 14px;
-            color: black;
-            font-family: 'Montserrat';
+            color: $white;
             text-decoration: none;
-            font-weight: 600;
+        }
+    }
+    .nav-buttons {
+        padding-left: 39px;
+        @include flex();
+        button {
+            border: none;
+            background: transparent;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
         }
     }
 }
 
-nav {
-    display: flex;
-}
-
-.nav-buttons button {
-    border: none;
-    background: transparent;
-    width: 20px;
-    height: 20px;
-}
-
-.nav-buttons {
-    padding-left: 39px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .search-button {
     padding-right: 18px;
+}
+
+.nav-input {
+    border: none;
+    border-radius: 20px;
+    height: 1.5rem;
+    padding: 0 8px;
+    @include font($fw: 500);
+    display: none;
+}
+
+.display {
+    display: block;
 }
