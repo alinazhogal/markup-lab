@@ -1,16 +1,16 @@
-@font-face {
-    font-family: 'Roboto';
+@mixin font-roboto {
+    font-family: $font;
     src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     font-weight: 400;
 }
 
-@font-face {
+@mixin font-face {
     font-family: 'Montserrat';
     src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
     font-weight: 400;
 }
 
-@font-face {
+@mixin font-face {
     font-family: 'Montserrat Regular';
     src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
     font-weight: 400;
@@ -22,13 +22,13 @@
     font-weight: 500;
 }
 
-@font-face {
-    font-family: 'Montserrat Semi-bold';
+@mixin font-montserrats {
+    font-family: $font;
     src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
     font-weight: 600;
 }
 
-@font-face {
+@mixin font-montserratb {
     font-family: 'Montserrat Bold';
     src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
     font-weight: 700;

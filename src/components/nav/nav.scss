@@ -1,0 +1,39 @@
+nav {
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        width: 280px;
+
+        li a {
+            font-size: 14px;
+            color: black;
+            font-family: 'Montserrat';
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+}
+
+nav {
+    display: flex;
+}
+
+.nav-buttons button {
+    border: none;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+}
+
+.nav-buttons {
+    padding-left: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-button {
+    padding-right: 18px;
+}
