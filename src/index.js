@@ -23,11 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 !(
                     target.closest('.search-button') ||
                     target.classList.contains('nav-input')
-                )
+                ) &&
+                !search[j].value
             ) {
                 search[j].classList.remove('input-open')
             }
-            if (target.closest('.search-button')) {
+            if (target.closest('.search-button') && !search[j].value) {
                 search[j].classList.toggle('input-open')
             }
         }
