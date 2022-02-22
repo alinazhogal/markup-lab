@@ -54,7 +54,7 @@ li a:hover {
     outline: none;
 }
 
-.open {
+.input-open {
     @include font($fw: 500);
     transition: 300ms ease-out;
     width: 200px;
@@ -119,5 +119,22 @@ li a:hover {
     }
     .search-button {
         padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-input {
+        height: 40px;
+        position: absolute;
+        width: 300px;
+        z-index: -1;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .input-open {
+        border: 3px solid $primary-color;
+        top: 100px;
     }
 }
