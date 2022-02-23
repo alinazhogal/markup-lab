@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     document.body.append(header)
 
-    const search = document.querySelectorAll('.nav-input')
-
     document.addEventListener('click', (e) => {
+        const search = document.querySelectorAll('.nav-input')
         const { target } = e
+        const mobInputSearch = document.querySelector('.mobile-nav .nav-input')
         const inputContainer = document.querySelector('.input-mob-container')
 
         for (let j = 0; j < search.length; j += 1) {
@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     target.closest('#search-btn-mob') ||
                     target.classList.contains('nav-input')
                 ) &&
-                !search[j].value
+                !search[j].value &&
+                !mobInputSearch.value
             ) {
                 search[j].classList.remove('input-open')
                 inputContainer.classList.remove('input-mob-container-open')
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        if (target.closest('#search-btn-mob')) {
+        if (target.closest('#search-btn-mob') && !mobInputSearch.value) {
             inputContainer.classList.toggle('input-mob-container-open')
         }
 
