@@ -1,6 +1,7 @@
 import './styles.scss'
 
 const headerTemplate = require('./components/header/header.handlebars')
+const topSectionTemplate = require('./components/top-section/top-section.handlebars')
 
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.createElement('header')
@@ -13,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
     })
     document.body.append(header)
+
+    const topSection = document.createElement('section')
+    topSection.innerHTML = topSectionTemplate()
+    document.body.append(topSection)
 
     document.addEventListener('click', (e) => {
         const search = document.querySelectorAll('.nav-input')

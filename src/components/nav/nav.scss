@@ -14,7 +14,7 @@
 li a {
     @include font($fw: 600);
     font-size: 14px;
-    color: $white;
+    color: #fff;
     text-decoration: none;
     transition: 300ms ease-out;
 }
