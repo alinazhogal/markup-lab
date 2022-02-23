@@ -104,7 +104,7 @@ li a:hover {
     .mobile-menu-open {
         transition: 500ms ease-out;
         top: 80px;
-        z-index: -1;
+        z-index: -10;
         .nav-list {
             opacity: 1;
             transition: 500ms ease-out;
@@ -120,6 +120,16 @@ li a:hover {
     #search-btn-mob {
         padding-right: 0;
     }
+
+    .color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $primary-color;
+        z-index: -1;
+        width: 100vw;
+        height: 100px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -127,7 +137,7 @@ li a:hover {
         height: 0;
         position: absolute;
         width: 0;
-        z-index: -1;
+        z-index: -10;
         top: 40px;
         left: 50%;
         transform: translateX(-50%);
@@ -137,7 +147,7 @@ li a:hover {
         height: 40px;
         width: 300px;
         border: 3px solid $primary-color;
-        top: 100px;
+        top: 120px;
     }
 
     .mobile-menu-open .nav-input {
