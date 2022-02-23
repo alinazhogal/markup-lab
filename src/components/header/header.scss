@@ -2,10 +2,9 @@
 
 .header-container {
     @include flex($ai: center, $jc: space-between);
-    width: 1322px;
-    height: 58px;
-    padding: 0 164px;
-    background-color: $primary-color;
+    width: 1022px;
+    margin: 0 auto;
+    z-index: 100;
 }
 
 header {
@@ -13,4 +12,21 @@ header {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 90%;
+    height: 100px;
+    padding: 0 18px;
+    background-color: $primary-color;
+    @include flex($ai: center, $jc: center);
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        height: 80px;
+    }
+}
+
+@media screen and (min-width: 1500px), (max-width: 1240px) {
+    header {
+        width: 100vw;
+    }
 }

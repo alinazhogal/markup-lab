@@ -5,4 +5,9 @@
     font-size: 24px;
     color: $white;
     text-decoration: none;
+    transition: 300ms ease-out;
+}
+
+.logo a:hover {
+    color: $hover-color;
 }
