@@ -38,7 +38,7 @@ li a:hover {
     fill: $hover-color;
 }
 
-.search-button {
+#search-btn-desk {
     padding-right: 18px;
 }
 
@@ -104,7 +104,7 @@ li a:hover {
     .mobile-menu-open {
         transition: 500ms ease-out;
         top: 80px;
-        z-index: -1;
+        z-index: -10;
         .nav-list {
             opacity: 1;
             transition: 500ms ease-out;
@@ -117,8 +117,21 @@ li a:hover {
             padding-left: 24px;
         }
     }
-    .search-button {
+    #search-btn-mob {
         padding-right: 0;
+    }
+
+    .color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $primary-color;
+        z-index: -1;
+        width: 100vw;
+        height: 100px;
+    }
+    .input-mob-container {
+        display: none;
     }
 }
 
@@ -127,10 +140,14 @@ li a:hover {
         height: 0;
         position: absolute;
         width: 0;
-        z-index: -1;
+        z-index: -10;
         top: 40px;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .nav-input::placeholder {
+        opacity: 0;
     }
 
     .input-open {
@@ -138,9 +155,31 @@ li a:hover {
         width: 300px;
         border: 3px solid $primary-color;
         top: 100px;
+        z-index: 10;
+    }
+
+    .input-open::placeholder {
+        opacity: 1;
     }
 
     .mobile-menu-open .nav-input {
         display: none;
+    }
+
+    .input-mob-container {
+        display: block;
+        width: 100vw;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $primary-color;
+        transition: 300ms ease-out;
+        z-index: -1;
+    }
+
+    .input-mob-container-open {
+        top: 100px;
+        transition: 300ms ease-out;
     }
 }
