@@ -1,0 +1,65 @@
+@import '../../style-rules';
+
+.modal {
+    background-color: #fff;
+    width: 328px;
+    height: 619px;
+    @include flex();
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 10px;
+
+    h3 {
+        color: $primary-color;
+        font-size: 24px;
+        @include font($fw: 700);
+        margin: 0;
+    }
+    label {
+        color: $primary-color;
+        @include font($fw: 600);
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+    input {
+        background-color: $background-input;
+        border: 1px solid $border-input;
+        color: $text-color-input;
+        padding: 11px 21px;
+        width: 245px;
+        height: 50px;
+        border-radius: 5px;
+        @include font($fw: 500);
+    }
+
+    input::placeholder {
+        @include font($fw: 500);
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    select {
+        appearance: none;
+        background-color: $background-input;
+        border: 1px solid $border-input;
+        color: $text-color-input;
+        width: 245px;
+        height: 50px;
+        border-radius: 5px;
+        padding: 11px 21px;
+        @include font($fw: 500);
+    }
+    button {
+        width: 248px;
+        height: 58px;
+        border-radius: 5px;
+        @include button();
+    }
+}
+
+button:hover {
+    @include button-hover;
+}

@@ -1,7 +1,10 @@
 $primary-color: #252b42;
 $accent-color: #ff7b47;
-$hover-color: #4695ad;
+$hover-color: #0d5c63;
 $white: #fff;
+$background-input: #f9f9f9;
+$text-color-input: #737373;
+$border-input: #bdbdbd;
 
 @mixin flex($jc: space-between, $ai: center) {
     display: flex;
@@ -12,4 +15,18 @@ $white: #fff;
 @mixin font($ff: Montserrat, $fw: 500) {
     font-family: $ff;
     font-weight: $fw;
+}
+
+@mixin button() {
+    @include font($fw: 700);
+    font-size: 14px;
+    border: none;
+    background-color: $accent-color;
+    color: #fff;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: 300ms ease-out;
+}
+@mixin button-hover {
+    background-color: #0d5c63;
 }

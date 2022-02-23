@@ -2,6 +2,7 @@ import './styles.scss'
 
 const headerTemplate = require('./components/header/header.handlebars')
 const topSectionTemplate = require('./components/top-section/top-section.handlebars')
+const topModalTemplate = require('./components/book-appointment-modal/book-appoin-modal.handlebars')
 
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.createElement('header')
@@ -18,6 +19,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const topSection = document.createElement('section')
     topSection.innerHTML = topSectionTemplate()
     document.body.append(topSection)
+
+    const topModal = document.createElement('div')
+    topModal.innerHTML = topModalTemplate({
+        input: [
+            {
+                label: 'Name*',
+                type: 'text',
+                placeholder: 'Full Name',
+                id: 'name',
+            },
+            {
+                label: 'Email*',
+                type: 'email',
+                placeholder: 'example@gmail.com',
+                id: 'email',
+            },
+        ],
+        select: [
+            {
+                label: 'Department*',
+                name: 'department',
+                default: 'Please Select',
+                option: [{ value: 'Dep' }, { value: 'Dep2' }],
+            },
+            {
+                label: 'Time*',
+                name: 'time',
+                default: '4:00 Available',
+                option: [{ value: 'Time' }, { value: 'Time2' }],
+            },
+        ],
+    })
+    const topSectionContainer = document.querySelector('.top-container')
+    topSectionContainer.append(topModal)
 
     document.addEventListener('click', (e) => {
         const search = document.querySelectorAll('.nav-input')

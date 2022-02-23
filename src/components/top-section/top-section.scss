@@ -43,18 +43,16 @@ section {
     }
 
     button {
-        @include font($fw: 700);
-        font-size: 14px;
-        border: none;
-        background-color: $accent-color;
+        @include button();
         width: 216px;
         padding: 10px 36px;
         height: 48px;
-        color: #fff;
         border-radius: 30px;
-        letter-spacing: 0.2px;
-        cursor: pointer;
     }
+}
+
+button:hover {
+    @include button-hover;
 }
 
 @media screen and (max-width: 600px) {
