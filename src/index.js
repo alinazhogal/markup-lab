@@ -32,10 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 search[j].classList.toggle('input-open')
             }
         }
-    })
 
-    document.addEventListener('click', (ev) => {
-        const { target } = ev
         const mobileMenu = document.querySelector('.mobile-menu')
         if (
             !(target.closest('.nav-list') || target.closest('.burger-button'))

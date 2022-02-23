@@ -124,9 +124,9 @@ li a:hover {
 
 @media screen and (max-width: 600px) {
     .nav-input {
-        height: 40px;
+        height: 0;
         position: absolute;
-        width: 300px;
+        width: 0;
         z-index: -1;
         top: 40px;
         left: 50%;
@@ -134,7 +134,13 @@ li a:hover {
     }
 
     .input-open {
+        height: 40px;
+        width: 300px;
         border: 3px solid $primary-color;
         top: 100px;
+    }
+
+    .mobile-menu-open .nav-input {
+        display: none;
     }
 }
