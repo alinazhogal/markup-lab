@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', (e) => {
         const { target } = e
+        const inputContainer = document.querySelector('.input-mob-container')
+
         for (let j = 0; j < search.length; j += 1) {
             if (
                 !(
@@ -28,13 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 !search[j].value
             ) {
                 search[j].classList.remove('input-open')
+                inputContainer.classList.remove('input-mob-container-open')
             }
+
             if (
-                target.closest('#search-btn-desk') ||
-                (target.closest('#search-btn-mob') && !search[j].value)
+                (target.closest('#search-btn-desk') ||
+                    target.closest('#search-btn-mob')) &&
+                !search[j].value
             ) {
                 search[j].classList.toggle('input-open')
             }
+        }
+
+        if (target.closest('#search-btn-mob')) {
+            inputContainer.classList.toggle('input-mob-container-open')
         }
 
         const mobileMenu = document.querySelector('.mobile-menu')
