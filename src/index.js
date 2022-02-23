@@ -21,25 +21,27 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let j = 0; j < search.length; j += 1) {
             if (
                 !(
-                    target.closest('.search-button') ||
+                    target.closest('#search-btn-desk') ||
+                    target.closest('#search-btn-mob') ||
                     target.classList.contains('nav-input')
                 ) &&
                 !search[j].value
             ) {
                 search[j].classList.remove('input-open')
             }
-            if (target.closest('.search-button') && !search[j].value) {
+            if (
+                target.closest('#search-btn-desk') ||
+                (target.closest('#search-btn-mob') && !search[j].value)
+            ) {
                 search[j].classList.toggle('input-open')
             }
         }
 
         const mobileMenu = document.querySelector('.mobile-menu')
-        if (
-            !(target.closest('.nav-list') || target.closest('.burger-button'))
-        ) {
+        if (!(target.closest('.nav-list') || target.closest('#burger-btn'))) {
             mobileMenu.classList.remove('mobile-menu-open')
         }
-        if (target.closest('.burger-button')) {
+        if (target.closest('#burger-btn')) {
             mobileMenu.classList.toggle('mobile-menu-open')
         }
     })

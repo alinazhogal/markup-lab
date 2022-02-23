@@ -38,7 +38,7 @@ li a:hover {
     fill: $hover-color;
 }
 
-.search-button {
+#search-btn-desk {
     padding-right: 18px;
 }
 
@@ -117,7 +117,7 @@ li a:hover {
             padding-left: 24px;
         }
     }
-    .search-button {
+    #search-btn-mob {
         padding-right: 0;
     }
 }

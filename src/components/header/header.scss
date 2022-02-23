@@ -12,8 +12,9 @@ header {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    height: 100px;
+    width: 100vw;
+    height: 104px;
+    z-index: 100;
     padding: 0 18px;
     background-color: $primary-color;
     @include flex($ai: center, $jc: center);
@@ -21,12 +22,6 @@ header {
 
 @media screen and (max-width: 800px) {
     header {
-        height: 80px;
-    }
-}
-
-@media screen and (min-width: 1500px), (max-width: 1240px) {
-    header {
-        width: 100vw;
+        height: 100px;
     }
 }
