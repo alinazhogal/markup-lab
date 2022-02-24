@@ -1,9 +1,6 @@
 @import '../../style-rules';
 
 section {
-    // position: relative;
-    // top: 100px;
-    // left: 0;
     background: url('/src/img/background.png') no-repeat;
     background-size: cover;
     display: flex;
@@ -15,7 +12,7 @@ section {
     max-width: 1050px;
     width: 100%;
     display: flex;
-    margin: 265px 0 151px 0;
+    margin: 154px 0 50px 0;
     @include flex();
 }
 

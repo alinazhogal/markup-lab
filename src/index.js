@@ -116,4 +116,13 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('scrolled')
         } else header.classList.remove('scrolled')
     })
+    const topButton = document.querySelector('#book-appoint-top')
+    const topModal = document.querySelector('.modal')
+    topButton.addEventListener('click', () => {
+        topModal.classList.toggle('modal-open')
+    })
+    const closeModalBut = document.querySelector('#close-modal')
+    closeModalBut.addEventListener('click', () => {
+        topModal.classList.remove('modal-open')
+    })
 })

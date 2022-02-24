@@ -4,17 +4,31 @@
     background-color: #fff;
     width: 328px;
     height: 619px;
-    @include flex();
-    flex-direction: column;
     padding: 40px;
     border-radius: 10px;
-    display: none;
+    transition: 300ms ease-out;
+    opacity: 0;
+
+    #close-modal {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        display: none;
+    }
 
     h3 {
         color: $primary-color;
         font-size: 24px;
         @include font($fw: 700);
         margin: 0;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    form {
+        @include flex();
+        flex-direction: column;
+        height: 472px;
     }
     label {
         color: $primary-color;
@@ -25,7 +39,7 @@
     input {
         background-color: $background-input;
         border: 1px solid $border-input;
-        color: $text-color-input;
+        color: $text-color;
         padding: 11px 21px;
         width: 245px;
         height: 50px;
@@ -46,24 +60,65 @@
         appearance: none;
         background-color: $background-input;
         border: 1px solid $border-input;
-        color: $text-color-input;
+        color: $text-color;
         width: 245px;
         height: 50px;
         border-radius: 5px;
         padding: 11px 21px;
         @include font($fw: 500);
-        //  background-image: url('../../img/arrow-down.svg');
+        //  background: url('../../img/arrow-down.png');
         //          background-repeat: no-repeat;
-        // background-position: right .7em top 50%, 0 0;
+
+        option {
+            line-height: 30px;
+            color: $text-color;
+        }
     }
+    select:required:invalid {
+        color: $text-color-input;
+    }
+
     button {
         width: 248px;
         height: 58px;
         border-radius: 5px;
         @include button();
+        margin-top: 15px;
     }
 }
 
 .modal button:hover {
     @include button-hover;
+}
+
+.modal-open {
+    transition: 300ms ease-out;
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .modal {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        z-index: -10;
+        padding: 60px 40px 40px;
+        input,
+        select,
+        button {
+            width: 300px;
+            transition: 300ms ease-out;
+        }
+        #close-modal {
+            display: block;
+        }
+    }
+
+    .modal-open {
+        z-index: 1000;
+        transition: 300ms ease-out;
+    }
 }
