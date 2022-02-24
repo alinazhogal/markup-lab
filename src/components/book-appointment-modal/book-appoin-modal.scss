@@ -8,6 +8,7 @@
     flex-direction: column;
     padding: 40px;
     border-radius: 10px;
+    display: none;
 
     h3 {
         color: $primary-color;
@@ -51,6 +52,9 @@
         border-radius: 5px;
         padding: 11px 21px;
         @include font($fw: 500);
+        //  background-image: url('../../img/arrow-down.svg');
+        //          background-repeat: no-repeat;
+        // background-position: right .7em top 50%, 0 0;
     }
     button {
         width: 248px;
@@ -60,6 +64,6 @@
     }
 }
 
-button:hover {
+.modal button:hover {
     @include button-hover;
 }
