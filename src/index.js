@@ -21,7 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
     }
 
-    createHTMLElement('header', headerTemplate, headerObj, document.body)
+    const header = createHTMLElement(
+        'header',
+        headerTemplate,
+        headerObj,
+        document.body
+    )
 
     createHTMLElement('section', topSectionTemplate, {}, document.body)
 
@@ -103,5 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (target.closest('#burger-btn')) {
             mobileMenu.classList.toggle('mobile-menu-open')
         }
+    })
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset
+        if (scrollY) {
+            header.classList.add('scrolled')
+        } else header.classList.remove('scrolled')
     })
 })

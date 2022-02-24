@@ -16,10 +16,15 @@ header {
     height: 104px;
     z-index: 100;
     padding: 0 18px;
-    background-color: $primary-color;
+    background-color: transparent;
     @include flex($ai: center, $jc: center);
+    transition: 300ms ease-out;
 }
 
+.scrolled {
+    background-color: $primary-color;
+    transition: 300ms ease-out;
+}
 @media screen and (max-width: 800px) {
     header {
         height: 100px;

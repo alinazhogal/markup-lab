@@ -1,9 +1,9 @@
 @import '../../style-rules';
 
 section {
-    position: relative;
-    top: 100px;
-    left: 0;
+    // position: relative;
+    // top: 100px;
+    // left: 0;
     background: url('/src/img/background.png') no-repeat;
     background-size: cover;
     display: flex;
@@ -15,7 +15,7 @@ section {
     max-width: 1050px;
     width: 100%;
     display: flex;
-    margin: 151px 0;
+    margin: 265px 0 151px 0;
     @include flex();
 }
 
@@ -57,7 +57,7 @@ section button:hover {
 
 @media screen and (max-width: 600px) {
     .top-container {
-        margin: 84px 59px 200px 59px;
+        margin: 184px 59px 850px 59px;
         justify-content: center;
     }
     .top-section-info {
