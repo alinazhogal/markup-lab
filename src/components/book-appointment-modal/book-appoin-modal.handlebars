@@ -1,0 +1,20 @@
+<div class="modal">
+  <h3>Book Appointment</h3>
+  
+  {{#input}}
+  <div class="input-container">
+  <label>{{this.label}}</label>
+  <input type="{{{this.type}}}" placeholder="{{{this.placeholder}}}" id="{{{this.id}}}"/></div>
+  {{/input}}
+  
+   {{#select}}
+   <div class="input-container">
+  <label>{{this.label}}</label>
+  <select name="{{{this.name}}}">
+    <option value="" disabled selected>{{this.default}}</option>
+    {{#this.option}}
+    <option value="{{{this.value}}}">{{this.value}}  </option>{{/this.option}}
+  </select> </div>{{/select}}
+  
+  <button>Book Appointment</button>
+</div>

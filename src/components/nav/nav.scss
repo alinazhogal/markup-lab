@@ -14,7 +14,7 @@
 li a {
     @include font($fw: 600);
     font-size: 14px;
-    color: $white;
+    color: #fff;
     text-decoration: none;
     transition: 300ms ease-out;
 }
@@ -32,10 +32,6 @@ li a:hover {
         cursor: pointer;
         padding: -1px;
     }
-}
-
-.nav-buttons:hover {
-    fill: $hover-color;
 }
 
 #search-btn-desk {

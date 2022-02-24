@@ -3,6 +3,8 @@
 @use './components/header/header';
 @use './components/nav/nav';
 @use './components/logo/logo';
+@use './components/top-section/top-section.scss';
+@use './components/book-appointment-modal/book-appoin-modal.scss';
 
 * {
     box-sizing: border-box;

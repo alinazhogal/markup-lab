@@ -1,0 +1,77 @@
+@import '../../style-rules';
+
+section {
+    position: relative;
+    top: 100px;
+    left: 0;
+    background: url('/src/img/background.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.top-container {
+    max-width: 1050px;
+    width: 100%;
+    display: flex;
+    margin: 151px 0;
+    @include flex();
+}
+
+.top-section-info {
+    @include flex($ai: flex-start);
+    flex-direction: column;
+    color: #fff;
+    width: 30%;
+
+    h1 {
+        @include font($fw: 800);
+        font-size: 58px;
+        margin: 0;
+        margin-bottom: 35px;
+        line-height: 140%;
+    }
+
+    h4 {
+        @include font($fw: 500);
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.2px;
+        margin: 0;
+        margin-bottom: 35px;
+    }
+
+    button {
+        @include button();
+        width: 216px;
+        padding: 10px 36px;
+        height: 48px;
+        border-radius: 30px;
+    }
+}
+
+section button:hover {
+    @include button-hover;
+}
+
+@media screen and (max-width: 600px) {
+    .top-container {
+        margin: 84px 59px 200px 59px;
+        justify-content: center;
+    }
+    .top-section-info {
+        align-items: center;
+        width: 276px;
+        justify-content: center;
+
+        h1 {
+            text-align: center;
+            @include font($fw: 700);
+            font-size: 40px;
+        }
+        h4 {
+            text-align: center;
+        }
+    }
+}
