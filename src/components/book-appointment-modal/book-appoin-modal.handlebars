@@ -4,13 +4,13 @@
   <form>
   {{#input}}
   <div class="input-container">
-  <label for="{{{this.id}}}" class="required-label">{{this.label}}</label>
+  <label for="{{{this.id}}}" class="required">{{this.label}}</label>
   <input required type="{{{this.type}}}" placeholder="{{{this.placeholder}}}" id="{{{this.id}}} "/></div>
   {{/input}}
   
    {{#select}}
    <div class="input-container">
-  <label for="{{{this.name}}}" class="required-label">{{this.label}}</label>
+  <label for="{{{this.name}}}" class="required">{{this.label}}</label>
   <select  required name="{{{this.name}}}" id="{{{this.name}}}">
     <option value="" disabled selected hidden>{{this.default}}</option>
     {{#this.option}}

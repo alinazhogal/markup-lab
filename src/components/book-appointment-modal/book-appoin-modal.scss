@@ -35,10 +35,12 @@
             @include font($fw: 600);
             font-size: 14px;
             padding-bottom: 10px;
-            &::after {
-                content: '*';
-            }
         }
+
+        .required::after {
+            content: '*';
+        }
+
         input {
             background-color: $background-input;
             border: 1px solid $border-input;
