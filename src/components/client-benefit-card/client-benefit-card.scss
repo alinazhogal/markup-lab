@@ -1,13 +1,67 @@
 @import '../../style-rules';
 
 .benefit-card {
-    img {
-        width: 72px;
-        height: 72px;
+    width: 328px;
+    height: 385px;
+    background-color: #d9edff;
+    border-radius: 10px;
+    @include flex();
+    flex-direction: column;
+    margin: 0 15px 30px;
+
+    .benefit-card-header {
+        @include flex();
+        margin: 30px auto;
+        .circle {
+            width: 72px;
+            height: 72px;
+            border-radius: 50px;
+            background-color: #fff;
+            @include flex($jc: center);
+            margin-right: 15px;
+        }
     }
     h5 {
         @include font($fw: 700);
         font-size: 16px;
         color: $primary-color;
+    }
+    .benefit-info {
+        @include font($fw: 600);
+        font-size: 14px;
+        background-color: #fff;
+        border-radius: 11px;
+        border: 1px solid #a9d6ff;
+        width: 100%;
+        height: 253px;
+        @include flex($ai: flex-start);
+        flex-direction: column;
+        padding: 30px 44px 30px 50px;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            @include flex($ai: flex-start);
+            flex-direction: column;
+            height: 164px;
+
+            li {
+                color: $text-color-second;
+                padding-bottom: 5px;
+                width: 234px;
+                line-height: 24px;
+            }
+        }
+        li:first-child {
+            width: 195px;
+        }
+    }
+    a {
+        color: $secondary-color;
+        text-decoration: none;
+        transition: 300ms ease-out;
+        &:hover {
+            color: $accent-color;
+        }
     }
 }

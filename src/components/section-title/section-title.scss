@@ -17,5 +17,13 @@
         max-width: 470px;
         font-size: 14px;
         line-height: 20px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        max-width: 255px;
+        margin-bottom: 75px;
     }
 }
