@@ -20,7 +20,7 @@ li a {
 }
 
 li a:hover {
-    color: $hover-color;
+    color: $secondary-color;
 }
 
 .nav-buttons {
@@ -35,14 +35,14 @@ li a:hover {
         fill: #fff;
         transition: 300ms ease-out;
         &:hover {
-            fill: $hover-color;
+            fill: $secondary-color;
         }
     }
     a {
         fill: #fff;
         transition: 300ms ease-out;
         &:hover {
-            fill: $hover-color;
+            fill: $secondary-color;
         }
     }
 }
