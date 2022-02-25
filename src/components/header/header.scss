@@ -1,12 +1,5 @@
 @import '../../style-rules';
 
-.header-container {
-    @include flex($ai: center, $jc: space-between);
-    width: 1022px;
-    margin: 0 auto;
-    z-index: 100;
-}
-
 header {
     position: fixed;
     top: 0;
@@ -19,12 +12,20 @@ header {
     background-color: transparent;
     @include flex($ai: center, $jc: center);
     transition: 300ms ease-out;
+
+    .header-container {
+        @include flex($ai: center, $jc: space-between);
+        width: 1022px;
+        margin: 0 auto;
+        z-index: 100;
+    }
 }
 
 .scrolled {
     background-color: $primary-color;
     transition: 300ms ease-out;
 }
+
 @media screen and (max-width: 800px) {
     header {
         height: 100px;
