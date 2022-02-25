@@ -100,6 +100,11 @@
     opacity: 1;
 }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 @media screen and (max-width: 800px) {
     .modal {
         width: 100vw;

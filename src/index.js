@@ -128,16 +128,18 @@ document.addEventListener('DOMContentLoaded', () => {
         } else header.classList.remove('scrolled')
     })
 
-    const topButton = document.querySelector('#book-appoint-top')
+    const topAppointButton = document.querySelector('#book-appoint-top')
     const topModal = document.querySelector('.modal')
 
-    topButton.addEventListener('click', () => {
+    topAppointButton.addEventListener('click', () => {
         topModal.classList.toggle('modal-open')
+        document.body.classList.add('stop-scrolling')
     })
     const closeModalBut = document.querySelector('#close-modal')
 
     closeModalBut.addEventListener('click', () => {
         topModal.classList.remove('modal-open')
+        document.body.classList.remove('stop-scrolling')
     })
 
     const clientMattersObj = {
