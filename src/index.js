@@ -1,8 +1,13 @@
 import './styles.scss'
 
+const environmentalBenefitIcon = require('./img/environmental-benefit.svg')
+const saveMoneyBenefitIcon = require('./img/save-money-benefit.svg')
+const travelBenefitIcon = require('./img/travel-benefit.svg')
+
 const headerTemplate = require('./components/header/header.handlebars')
 const topSectionTemplate = require('./components/top-section/top-section.handlebars')
 const topModalTemplate = require('./components/book-appointment-modal/book-appoin-modal.handlebars')
+const clientMattersTemplate = require('./components/client-matters/client-matters.handlebars')
 
 function createHTMLElement(element, template, templateObj, placeToAppend) {
     const elementHTML = document.createElement(element)
@@ -122,13 +127,66 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('scrolled')
         } else header.classList.remove('scrolled')
     })
+
     const topButton = document.querySelector('#book-appoint-top')
     const topModal = document.querySelector('.modal')
+
     topButton.addEventListener('click', () => {
         topModal.classList.toggle('modal-open')
     })
     const closeModalBut = document.querySelector('#close-modal')
+
     closeModalBut.addEventListener('click', () => {
         topModal.classList.remove('modal-open')
     })
+
+    const clientMattersObj = {
+        benefitCard: [
+            {
+                headerName: 'Environmental',
+                learnLink: '/',
+                benefitIcon: environmentalBenefitIcon,
+                iconAlt: 'environmental benefit icon',
+                benefitsList: [
+                    { name: 'The best products start with Figma' },
+                    { name: 'Design with real data' },
+                    { name: 'Lightning fast prototyping' },
+                    { name: 'Fastest way to organize' },
+                    { name: 'Work at the speed of thought' },
+                ],
+            },
+            {
+                headerName: 'Save money and time',
+                learnLink: '/',
+                benefitIcon: saveMoneyBenefitIcon,
+                iconAlt: 'save money and time benefit icon',
+                benefitsList: [
+                    { name: 'The best products start with Figma' },
+                    { name: 'Design with real data' },
+                    { name: 'Lightning fast prototyping' },
+                    { name: 'Fastest way to organize' },
+                    { name: 'Work at the speed of thought' },
+                ],
+            },
+            {
+                headerName: 'Travel & Aviation ',
+                learnLink: '/',
+                benefitIcon: travelBenefitIcon,
+                iconAlt: 'travel and aviation benefit icon',
+                benefitsList: [
+                    { name: 'The best products start with Figma' },
+                    { name: 'Design with real data' },
+                    { name: 'Lightning fast prototyping' },
+                    { name: 'Fastest way to organize' },
+                    { name: 'Work at the speed of thought' },
+                ],
+            },
+        ],
+    }
+    createHTMLElement(
+        'section',
+        clientMattersTemplate,
+        clientMattersObj,
+        document.body
+    )
 })

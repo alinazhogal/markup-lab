@@ -1,12 +1,14 @@
 <div class="benefit-card">
-  <img src="{{{benefit-icon}}}" alt="{{{benefit.alt}}}">
-  <h5>{{benefit.title}}</h5>
+  <div class="circle">
+  <img src="{{benefitIcon}}" alt="{{{iconAlt}}}">
+  </div>
+  <h5>{{headerName}}</h5>
   <div class="benefit-info">
-    {{#}}
+    {{#benefitsList}}
     <ul>
-      <li>- {{benefit}}</li>
+      <li>- {{this.name}}</li>
     </ul>
-    {{/}}
-    <a href="{{}}">Learn more</a>
+    {{/benefitsList}}
+    <a href="{{learnLink}}">Learn more</a>
   </div>
 </div>
