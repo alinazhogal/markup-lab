@@ -100,11 +100,6 @@
     opacity: 1;
 }
 
-.stop-scrolling {
-    height: 100%;
-    overflow: hidden;
-}
-
 @media screen and (max-width: 800px) {
     .modal {
         width: 100vw;
@@ -129,5 +124,10 @@
     .modal-open {
         z-index: 1000;
         transition: 300ms ease-out;
+    }
+
+    .stop-scrolling {
+        height: 100%;
+        overflow: hidden;
     }
 }
