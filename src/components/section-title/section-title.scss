@@ -3,14 +3,19 @@
 .title {
     @include flex($jc: flex-start);
     flex-direction: column;
+    color: #fff;
+    text-align: center;
+
     h2 {
         @include font($fw: 700);
         font-size: 40px;
-        color: #fff;
         padding-bottom: 10px;
     }
 
     p {
         @include font($fw: 500);
+        max-width: 470px;
+        font-size: 14px;
+        line-height: 20px;
     }
 }

@@ -26,6 +26,7 @@ li a:hover {
 .nav-buttons {
     padding-left: 39px;
     @include flex();
+    -webkit-tap-highlight-color: transparent;
     button {
         border: none;
         background: transparent;
@@ -123,10 +124,7 @@ li a:hover {
         padding-left: 0;
         button,
         a {
-            padding-left: 24px;
-            &:hover {
-                fill: #fff;
-            }
+            margin-left: 24px;
         }
     }
     #search-btn-mob {
