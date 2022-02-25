@@ -109,7 +109,8 @@ li a:hover {
 
     .nav-buttons {
         padding-left: 0;
-        button {
+        button,
+        a {
             padding-left: 24px;
         }
     }

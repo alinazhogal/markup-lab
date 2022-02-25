@@ -28,18 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body
     )
 
-    createHTMLElement('section', topSectionTemplate, {}, document.body)
+    const topSection = createHTMLElement(
+        'section',
+        topSectionTemplate,
+        {},
+        document.body
+    )
+    topSection.classList.add('top-section')
 
     const topModalObj = {
         input: [
             {
-                label: 'Name*',
+                label: 'Name',
                 type: 'text',
                 placeholder: 'Full Name',
                 id: 'name',
             },
             {
-                label: 'Email*',
+                label: 'Email',
                 type: 'email',
                 placeholder: 'example@gmail.com',
                 id: 'email',
@@ -47,13 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         select: [
             {
-                label: 'Department*',
+                label: 'Department',
                 name: 'department',
                 default: 'Please Select',
                 option: [{ value: 'Dep' }, { value: 'Dep2' }],
             },
             {
-                label: 'Time*',
+                label: 'Time',
                 name: 'time',
                 default: '4:00 Available',
                 option: [{ value: 'Time' }, { value: 'Time2' }],
