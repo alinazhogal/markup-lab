@@ -1,6 +1,6 @@
 @import '../../style-rules';
 
-section {
+.top-section {
     background: url('/src/img/background.png') no-repeat;
     background-size: cover;
     display: flex;
@@ -20,7 +20,7 @@ section {
     @include flex($ai: flex-start);
     flex-direction: column;
     color: #fff;
-    width: 30%;
+    width: 36%;
 
     h1 {
         @include font($fw: 800);

@@ -31,6 +31,18 @@ li a:hover {
         background: transparent;
         cursor: pointer;
         padding: -1px;
+        fill: #fff;
+        transition: 300ms ease-out;
+        &:hover {
+            fill: $hover-color;
+        }
+    }
+    a {
+        fill: #fff;
+        transition: 300ms ease-out;
+        &:hover {
+            fill: $hover-color;
+        }
     }
 }
 
@@ -109,8 +121,12 @@ li a:hover {
 
     .nav-buttons {
         padding-left: 0;
-        button {
+        button,
+        a {
             padding-left: 24px;
+            &:hover {
+                fill: #fff;
+            }
         }
     }
     #search-btn-mob {

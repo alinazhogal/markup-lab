@@ -29,61 +29,63 @@
         @include flex();
         flex-direction: column;
         height: 472px;
-    }
-    label {
-        color: $primary-color;
-        @include font($fw: 600);
         font-size: 14px;
-        padding-bottom: 10px;
-    }
-    input {
-        background-color: $background-input;
-        border: 1px solid $border-input;
-        color: $text-color;
-        padding: 11px 21px;
-        width: 245px;
-        height: 50px;
-        border-radius: 5px;
-        @include font($fw: 500);
-    }
-
-    input::placeholder {
-        @include font($fw: 500);
-    }
-
-    .input-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    select {
-        appearance: none;
-        background-color: $background-input;
-        border: 1px solid $border-input;
-        color: $text-color;
-        width: 245px;
-        height: 50px;
-        border-radius: 5px;
-        padding: 11px 21px;
-        @include font($fw: 500);
-        //  background: url('../../img/arrow-down.png');
-        //          background-repeat: no-repeat;
-
-        option {
-            line-height: 30px;
-            color: $text-color;
+        label {
+            color: $primary-color;
+            @include font($fw: 600);
+            font-size: 14px;
+            padding-bottom: 10px;
+            &::after {
+                content: '*';
+            }
         }
-    }
-    select:required:invalid {
-        color: $text-color-input;
-    }
+        input {
+            background-color: $background-input;
+            border: 1px solid $border-input;
+            color: $text-color;
+            padding: 11px 21px;
+            width: 245px;
+            height: 50px;
+            border-radius: 5px;
+            @include font($fw: 500);
+        }
 
-    button {
-        width: 248px;
-        height: 58px;
-        border-radius: 5px;
-        @include button();
-        margin-top: 15px;
+        input::placeholder {
+            @include font($fw: 500);
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        select {
+            appearance: none;
+            background-color: $background-input;
+            border: 1px solid $border-input;
+            color: $text-color;
+            width: 245px;
+            height: 50px;
+            border-radius: 5px;
+            padding: 11px 21px;
+            @include font($fw: 500);
+
+            option {
+                line-height: 30px;
+                color: $text-color;
+            }
+        }
+        select:required:invalid {
+            color: $text-color-input;
+        }
+
+        button {
+            width: 248px;
+            height: 58px;
+            border-radius: 5px;
+            @include button();
+            margin-top: 15px;
+        }
     }
 }
 
