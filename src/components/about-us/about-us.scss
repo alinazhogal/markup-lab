@@ -26,7 +26,7 @@
     }
     @media screen and (max-width: 600px) {
         .section-content {
-            margin: 98px 20px 174px;
+            margin: 98px 20px 144px;
         }
     }
 }
@@ -37,6 +37,7 @@
     border-radius: 50px;
     background-color: $secondary-color;
     border: none;
+
     .vjs-icon-placeholder:before {
         top: 25%;
     }
@@ -50,6 +51,7 @@
     width: 877px;
     height: 442px;
     z-index: 10;
+    margin-bottom: 30px;
     @media screen and (max-width: 900px) {
         width: 560px;
         height: 300px;
