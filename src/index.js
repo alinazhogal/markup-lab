@@ -1,4 +1,5 @@
 import './styles.scss'
+import 'video.js'
 
 const environmentalBenefitIcon = require('./img/environmental-benefit.svg')
 const saveMoneyBenefitIcon = require('./img/save-money-benefit.svg')
@@ -8,6 +9,7 @@ const headerTemplate = require('./components/header/header.handlebars')
 const topSectionTemplate = require('./components/top-section/top-section.handlebars')
 const topModalTemplate = require('./components/book-appointment-modal/book-appoin-modal.handlebars')
 const clientMattersTemplate = require('./components/client-matters/client-matters.handlebars')
+const aboutUsTemplate = require('./components/about-us/about-us.handlebars')
 
 function createHTMLElement(element, template, templateObj, placeToAppend) {
     const elementHTML = document.createElement(element)
@@ -191,4 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
         clientMattersObj,
         document.body
     )
+
+    createHTMLElement('section', aboutUsTemplate, {}, document.body)
 })

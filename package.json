@@ -38,6 +38,7 @@
         "*.{md,html,scss}": "prettier --write"
     },
     "dependencies": {
-        "handlebars-loader": "^1.7.1"
+        "handlebars-loader": "^1.7.1",
+        "video.js": "^7.17.0"
     }
 }
