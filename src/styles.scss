@@ -1,5 +1,3 @@
-@use './components/team-section/team-section';
-
 @use './components/header/header';
 @use './components/nav/nav';
 @use './components/logo/logo';
@@ -12,6 +10,8 @@
 @use './components/video-about-us/video-js.css';
 @use './components/review-card/review-card.scss';
 @use './components/reviews-section/reviews-section.scss';
+@use './components/team-member-card/team-member-card.scss';
+@use './components/team-section/team-section.scss';
 
 * {
     box-sizing: border-box;

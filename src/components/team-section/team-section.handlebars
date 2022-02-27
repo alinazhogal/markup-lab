@@ -1,5 +1,9 @@
-<h2>{{ title }}</h2>
-<div class="description">{{ description }}</div>
-<div>
-    {{#team}}{{> ./../team-member/team-member}}{{/team}}
+<div class="section-content">
+{{>./../section-title/section-title titleName = "What Clients Say" titleDescription = "Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics"}}
+
+<div class="team-members">
+  {{#teamMemberCard}}
+  {{>./../team-member-card/team-member-card.handlebars}}
+  {{/teamMemberCard}}
+</div>
 </div>
