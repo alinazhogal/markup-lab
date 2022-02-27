@@ -42,6 +42,10 @@
     }
 }
 
+.vjs-poster {
+    background-size: cover;
+}
+
 .video-js {
     width: 877px;
     height: 442px;
@@ -54,4 +58,8 @@
         width: 306px;
         height: 442px;
     }
+}
+
+.vjs-tech {
+    object-fit: cover;
 }

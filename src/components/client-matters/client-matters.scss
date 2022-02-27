@@ -32,8 +32,9 @@ section {
     .section-content {
         margin: 98px 20px 24px;
     }
-    .benefit-card {
-        margin: 0;
-        margin-bottom: 30px;
+    .benefit-cards {
+        .benefit-card {
+            margin: 0 0 30px;
+        }
     }
 }
