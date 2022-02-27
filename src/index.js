@@ -194,5 +194,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body
     )
 
-    createHTMLElement('section', aboutUsTemplate, {}, document.body)
+    const aboutUs = createHTMLElement(
+        'section',
+        aboutUsTemplate,
+        {},
+        document.body
+    )
+    aboutUs.classList.add('about-us')
 })

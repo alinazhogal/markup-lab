@@ -1,0 +1,32 @@
+@use '../video-about-us/video-js.css';
+@import '../../style-rules';
+
+.video-js .vjs-big-play-button {
+    width: 98px;
+    height: 99px;
+    border-radius: 50px;
+    background-color: $secondary-color;
+    border: none;
+    .vjs-icon-placeholder:before {
+        top: 25%;
+    }
+}
+
+.video-js {
+    width: 877px;
+    height: 442px;
+    z-index: 10;
+}
+
+.about-us {
+    position: relative;
+    .dark-bg {
+        width: 100vw;
+        height: 350px;
+        background: #0c101e;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
