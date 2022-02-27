@@ -20,11 +20,11 @@
         line-height: 20px;
         margin: 0;
     }
-}
-
-@media screen and (max-width: 600px) {
-    .title {
-        max-width: 255px;
+    @media screen and (max-width: 600px) {
+        h2 {
+            width: 266px;
+        }
+        max-width: 250px;
         margin-bottom: 75px;
     }
 }
