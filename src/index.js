@@ -255,5 +255,11 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
     }
 
-    createHTMLElement('section', teamTemplate, teamObj, document.body)
+    const team = createHTMLElement(
+        'section',
+        teamTemplate,
+        teamObj,
+        document.body
+    )
+    team.classList.add('team')
 })

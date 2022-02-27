@@ -1,1 +1,33 @@
 @import '../../style-rules';
+
+.team .section-content {
+    margin: 80px 20px 62px;
+}
+
+.team-members {
+    @include flex();
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1100px) {
+    .team-members {
+        justify-content: center;
+        .team-members {
+            margin: 0 15px 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .team .section-content {
+        margin: 75px 20px 94px;
+    }
+    .title {
+        margin-bottom: 45px;
+    }
+    .team-members {
+        .team-members {
+            margin: 0 0 30px;
+        }
+    }
+}
