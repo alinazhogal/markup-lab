@@ -5,7 +5,6 @@
     background-size: cover;
     display: flex;
     justify-content: center;
-    padding: 0 20px;
 }
 
 .top-container {
@@ -14,6 +13,7 @@
     display: flex;
     margin: 154px 0 50px 0;
     @include flex();
+    padding: 0 20px;
 }
 
 .top-section-info {

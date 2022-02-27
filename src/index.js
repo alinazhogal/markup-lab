@@ -1,13 +1,17 @@
 import './styles.scss'
+import 'video.js'
 
 const environmentalBenefitIcon = require('./img/environmental-benefit.svg')
 const saveMoneyBenefitIcon = require('./img/save-money-benefit.svg')
 const travelBenefitIcon = require('./img/travel-benefit.svg')
+const reviewerPhoto1 = require('./img/review-photo-1.png')
 
 const headerTemplate = require('./components/header/header.handlebars')
 const topSectionTemplate = require('./components/top-section/top-section.handlebars')
 const topModalTemplate = require('./components/book-appointment-modal/book-appoin-modal.handlebars')
 const clientMattersTemplate = require('./components/client-matters/client-matters.handlebars')
+const aboutUsTemplate = require('./components/about-us/about-us.handlebars')
+const reviewsTemplate = require('./components/reviews-section/reviews-section.handlebars')
 
 function createHTMLElement(element, template, templateObj, placeToAppend) {
     const elementHTML = document.createElement(element)
@@ -191,4 +195,51 @@ document.addEventListener('DOMContentLoaded', () => {
         clientMattersObj,
         document.body
     )
+
+    const aboutUs = createHTMLElement(
+        'section',
+        aboutUsTemplate,
+        {},
+        document.body
+    )
+    aboutUs.classList.add('about-us')
+
+    const reviewsObj = {
+        reviewCard: [
+            {
+                reviewText:
+                    'Slate helps you see how many more days you need to work to reach your financial goal.',
+                reviewer: {
+                    photo: reviewerPhoto1,
+                    name: 'Regina Miles',
+                    profession: 'Designer',
+                },
+            },
+            {
+                reviewText:
+                    'Slate helps you see how many more days you need to work to reach your financial goal.',
+                reviewer: {
+                    photo: reviewerPhoto1,
+                    name: 'Regina Miles',
+                    profession: 'Designer',
+                },
+            },
+            {
+                reviewText:
+                    'Slate helps you see how many more days you need to work to reach your financial goal.',
+                reviewer: {
+                    photo: reviewerPhoto1,
+                    name: 'Regina Miles',
+                    profession: 'Designer',
+                },
+            },
+        ],
+    }
+    const reviews = createHTMLElement(
+        'section',
+        reviewsTemplate,
+        reviewsObj,
+        document.body
+    )
+    reviews.classList.add('reviews')
 })
