@@ -1,0 +1,34 @@
+@import '../../style-rules';
+
+.reviews {
+    .title {
+        margin-bottom: 50px;
+        @media screen and (max-width: 600px) {
+            margin-bottom: 60px;
+        }
+    }
+}
+.review-cards {
+    @include flex();
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1100px) {
+    .review-cards {
+        justify-content: center;
+        .review-card {
+            margin: 0 15px 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .section-content {
+        margin: 75px 20px 64px;
+    }
+    .review-cards {
+        .review-card {
+            margin: 0 0 30px;
+        }
+    }
+}
