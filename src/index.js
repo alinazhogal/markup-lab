@@ -5,6 +5,9 @@ const environmentalBenefitIcon = require('./img/environmental-benefit.svg')
 const saveMoneyBenefitIcon = require('./img/save-money-benefit.svg')
 const travelBenefitIcon = require('./img/travel-benefit.svg')
 const reviewerPhoto1 = require('./img/review-photo-1.png')
+const teamPhoto1 = require('./img/team-1.png')
+const teamPhoto2 = require('./img/team-2.png')
+const teamPhoto3 = require('./img/team-3.png')
 
 const headerTemplate = require('./components/header/header.handlebars')
 const topSectionTemplate = require('./components/top-section/top-section.handlebars')
@@ -12,6 +15,7 @@ const topModalTemplate = require('./components/book-appointment-modal/book-appoi
 const clientMattersTemplate = require('./components/client-matters/client-matters.handlebars')
 const aboutUsTemplate = require('./components/about-us/about-us.handlebars')
 const reviewsTemplate = require('./components/reviews-section/reviews-section.handlebars')
+const teamTemplate = require('./components/team-section/team-section.handlebars')
 
 function createHTMLElement(element, template, templateObj, placeToAppend) {
     const elementHTML = document.createElement(element)
@@ -242,4 +246,20 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body
     )
     reviews.classList.add('reviews')
+
+    const teamObj = {
+        teamMemberCard: [
+            { photo: teamPhoto1, name: 'Avie Beaton', role: 'CO Founder' },
+            { photo: teamPhoto2, name: 'Ben Jonson', role: 'Consultant' },
+            { photo: teamPhoto3, name: 'Ashley Fletcher', role: 'CEO' },
+        ],
+    }
+
+    const team = createHTMLElement(
+        'section',
+        teamTemplate,
+        teamObj,
+        document.body
+    )
+    team.classList.add('team')
 })
