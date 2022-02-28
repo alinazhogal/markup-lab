@@ -8,13 +8,12 @@
     }
 }
 .review-cards {
-    @include flex();
+    @include flex($jc: center);
     flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1100px) {
     .review-cards {
-        justify-content: center;
         .review-card {
             margin: 0 15px 30px;
         }
