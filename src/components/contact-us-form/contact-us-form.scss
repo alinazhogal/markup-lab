@@ -1,0 +1,86 @@
+@import '../../style-rules';
+
+.contact-form {
+    @include font($fw: 700);
+    color: #fff;
+    max-width: 602px;
+    @include flex($ai: flex-start);
+    flex-direction: column;
+    h5 {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+    }
+    h2 {
+        font-size: 40px;
+        line-height: 57px;
+        margin: 0;
+        padding-bottom: 40px;
+    }
+    form {
+        @include flex();
+        flex-wrap: wrap;
+        font-size: 14px;
+        color: $text-color;
+        input {
+            @include font($fw: 600);
+            width: 286px;
+            padding: 11px 0 15px 21px;
+            border-radius: 5px;
+            background-color: $background-input;
+            height: 50px;
+            border: 1px solid $border-input;
+            letter-spacing: 0.2px;
+            margin-bottom: 20px;
+        }
+        input::placeholder {
+            color: #bdbdbd;
+        }
+        select {
+            @include font($fw: 600);
+            appearance: none;
+            background-color: $background-input;
+            border: 1px solid $border-input;
+            color: $text-color;
+            width: 286px;
+            height: 50px;
+            border-radius: 5px;
+            padding: 11px 0 15px 18px;
+            letter-spacing: 0.2px;
+            margin-bottom: 20px;
+            option {
+                color: $text-color;
+            }
+        }
+        select:required:invalid {
+            color: #bdbdbd;
+        }
+        textarea {
+            @include font($fw: 600);
+            color: $text-color;
+            letter-spacing: 0.2px;
+            border-radius: 5px;
+            background-color: $background-input;
+            border: 1px solid $border-input;
+            height: 140px;
+            width: 598px;
+            padding: 16px 0 0 26px;
+            margin-bottom: 40px;
+            @media screen and (max-width: 700px) {
+                width: 286px;
+            }
+        }
+        textarea::placeholder {
+            color: #bdbdbd;
+        }
+        button {
+            width: 218px;
+            height: 58px;
+            border-radius: 5px;
+            @include button();
+        }
+        button:hover {
+            @include button-hover();
+        }
+    }
+}
