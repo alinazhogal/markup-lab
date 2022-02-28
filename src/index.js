@@ -16,6 +16,7 @@ const clientMattersTemplate = require('./components/client-matters/client-matter
 const aboutUsTemplate = require('./components/about-us/about-us.handlebars')
 const reviewsTemplate = require('./components/reviews-section/reviews-section.handlebars')
 const teamTemplate = require('./components/team-section/team-section.handlebars')
+const contactUsTemplate = require('./components/contact-us-section/contact-us-section.handlebars')
 
 function createHTMLElement(element, template, templateObj, placeToAppend) {
     const elementHTML = document.createElement(element)
@@ -262,4 +263,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body
     )
     team.classList.add('team')
+
+    const contactUs = createHTMLElement(
+        'section',
+        contactUsTemplate,
+        {},
+        document.body
+    )
+    contactUs.classList.add('contact-us')
 })
