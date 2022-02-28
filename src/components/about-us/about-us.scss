@@ -34,13 +34,17 @@
 .video-js .vjs-big-play-button {
     width: 98px;
     height: 99px;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: $secondary-color;
     border: none;
 
     .vjs-icon-placeholder:before {
         top: 25%;
     }
+}
+
+.vjs-big-play-centered .vjs-big-play-button {
+    top: 45%;
 }
 
 .vjs-poster {

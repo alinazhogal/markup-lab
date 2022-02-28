@@ -5,13 +5,12 @@
 }
 
 .team-members {
-    @include flex();
+    @include flex($jc: center);
     flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1100px) {
     .team-members {
-        justify-content: center;
         .team-members {
             margin: 0 15px 30px;
         }
