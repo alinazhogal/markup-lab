@@ -1,13 +1,13 @@
 <div class="benefit-card">
   <div class="benefit-card-header">
-    <div class="circle">
+    <div class="icon-container">
   <img src="{{benefitIcon}}" alt="{{{iconAlt}}}"></div>
   <h5>{{headerName}}</h5>
   </div>
   <div class="benefit-info">
     <ul>
       {{#benefitsList}}
-      <li>- {{this.name}}</li>
+      <li>{{this.name}}</li>
        {{/benefitsList}}
     </ul>
     <a href="{{learnLink}}">Learn more</a>

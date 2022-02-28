@@ -12,7 +12,7 @@
     .benefit-card-header {
         @include flex();
         margin: 30px auto;
-        .circle {
+        .icon-container {
             width: 72px;
             height: 72px;
             border-radius: 50px;
@@ -54,6 +54,9 @@
         }
         li:first-child {
             width: 195px;
+        }
+        li::before {
+            content: '- ';
         }
     }
     a {
