@@ -29,6 +29,7 @@
         @include font($fw: 700);
         font-size: 16px;
         color: $primary-color;
+        padding-bottom: 0;
     }
     .benefit-info {
         @include font($fw: 600);

@@ -5,9 +5,9 @@ const environmentalBenefitIcon = require('./img/environmental-benefit.svg')
 const saveMoneyBenefitIcon = require('./img/save-money-benefit.svg')
 const travelBenefitIcon = require('./img/travel-benefit.svg')
 const reviewerPhoto1 = require('./img/review-photo-1.png')
-const teamPhoto1 = require('./img/team-1.png')
-const teamPhoto2 = require('./img/team-2.png')
-const teamPhoto3 = require('./img/team-3.png')
+const teamPhoto1 = require('./img/team-1.webp')
+const teamPhoto2 = require('./img/team-2.webp')
+const teamPhoto3 = require('./img/team-3.webp')
 
 const headerTemplate = require('./components/header/header.handlebars')
 const topSectionTemplate = require('./components/top-section/top-section.handlebars')
@@ -83,74 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         document.querySelector('.top-container')
     )
-
-    document.addEventListener('click', (e) => {
-        const search = document.querySelectorAll('.nav-input')
-        const { target } = e
-        const mobInputSearch = document.querySelector('.mobile-nav .nav-input')
-        const inputContainer = document.querySelector('.input-mob-container')
-
-        for (let j = 0; j < search.length; j += 1) {
-            if (
-                !(
-                    target.closest('#search-btn-desk') ||
-                    target.closest('#search-btn-mob') ||
-                    target.classList.contains('nav-input')
-                ) &&
-                !search[j].value &&
-                !mobInputSearch.value
-            ) {
-                search[j].classList.remove('input-open')
-                inputContainer.classList.remove('input-mob-container-open')
-            }
-
-            if (
-                (target.closest('#search-btn-desk') ||
-                    target.closest('#search-btn-mob')) &&
-                !search[j].value
-            ) {
-                search[j].classList.toggle('input-open')
-            }
-        }
-
-        window.addEventListener('resize', () => {
-            mobInputSearch.classList.remove('input-open')
-            inputContainer.classList.remove('input-mob-container-open')
-        })
-
-        if (target.closest('#search-btn-mob') && !mobInputSearch.value) {
-            inputContainer.classList.toggle('input-mob-container-open')
-        }
-
-        const mobileMenu = document.querySelector('.mobile-menu')
-        if (!(target.closest('.nav-list') || target.closest('#burger-btn'))) {
-            mobileMenu.classList.remove('mobile-menu-open')
-        }
-        if (target.closest('#burger-btn')) {
-            mobileMenu.classList.toggle('mobile-menu-open')
-        }
-    })
-
-    window.addEventListener('scroll', () => {
-        const scrollY = window.pageYOffset
-        if (scrollY) {
-            header.classList.add('scrolled')
-        } else header.classList.remove('scrolled')
-    })
-
-    const topAppointButton = document.querySelector('#book-appoint-top')
-    const topModal = document.querySelector('.modal')
-
-    topAppointButton.addEventListener('click', () => {
-        topModal.classList.toggle('modal-open')
-        document.body.classList.add('stop-scrolling')
-    })
-    const closeModalBut = document.querySelector('#close-modal')
-
-    closeModalBut.addEventListener('click', () => {
-        topModal.classList.remove('modal-open')
-        document.body.classList.remove('stop-scrolling')
-    })
 
     createHTMLElement(
         'section',
@@ -300,4 +232,71 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         document.body
     )
+    document.addEventListener('click', (e) => {
+        const search = document.querySelectorAll('.nav-input')
+        const { target } = e
+        const mobInputSearch = document.querySelector('.mobile-nav .nav-input')
+        const inputContainer = document.querySelector('.input-mob-container')
+
+        for (let j = 0; j < search.length; j += 1) {
+            if (
+                !(
+                    target.closest('#search-btn-desk') ||
+                    target.closest('#search-btn-mob') ||
+                    target.classList.contains('nav-input')
+                ) &&
+                !search[j].value &&
+                !mobInputSearch.value
+            ) {
+                search[j].classList.remove('input-open')
+                inputContainer.classList.remove('input-mob-container-open')
+            }
+
+            if (
+                (target.closest('#search-btn-desk') ||
+                    target.closest('#search-btn-mob')) &&
+                !search[j].value
+            ) {
+                search[j].classList.toggle('input-open')
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            mobInputSearch.classList.remove('input-open')
+            inputContainer.classList.remove('input-mob-container-open')
+        })
+
+        if (target.closest('#search-btn-mob') && !mobInputSearch.value) {
+            inputContainer.classList.toggle('input-mob-container-open')
+        }
+
+        const mobileMenu = document.querySelector('.mobile-menu')
+        if (!(target.closest('.nav-list') || target.closest('#burger-btn'))) {
+            mobileMenu.classList.remove('mobile-menu-open')
+        }
+        if (target.closest('#burger-btn')) {
+            mobileMenu.classList.toggle('mobile-menu-open')
+        }
+    })
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.pageYOffset
+        if (scrollY) {
+            header.classList.add('scrolled')
+        } else header.classList.remove('scrolled')
+    })
+
+    const topAppointButton = document.querySelector('#book-appoint-top')
+    const topModal = document.querySelector('.modal')
+
+    topAppointButton.addEventListener('click', () => {
+        topModal.classList.toggle('modal-open')
+        document.body.classList.add('stop-scrolling')
+    })
+    const closeModalBut = document.querySelector('#close-modal')
+
+    closeModalBut.addEventListener('click', () => {
+        topModal.classList.remove('modal-open')
+        document.body.classList.remove('stop-scrolling')
+    })
 })
