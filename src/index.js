@@ -17,6 +17,7 @@ const aboutUsTemplate = require('./components/about-us/about-us.handlebars')
 const reviewsTemplate = require('./components/reviews-section/reviews-section.handlebars')
 const teamTemplate = require('./components/team-section/team-section.handlebars')
 const contactUsTemplate = require('./components/contact-us-section/contact-us-section.handlebars')
+const footerTemplate = require('./components/footer/footer.handlebars')
 
 function createHTMLElement(element, template, templateObj, placeToAppend) {
     const elementHTML = document.createElement(element)
@@ -271,4 +272,31 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body
     )
     contactUs.classList.add('contact-us')
+
+    const footerObj = {
+        lists: [
+            {
+                listTitle: 'Company Info',
+                links: ['About Us', 'Carrier', 'We are hiring', 'Blog'],
+            },
+            {
+                listTitle: 'Legal',
+                links: ['About Us', 'Carrier', 'We are hiring', 'Blog'],
+            },
+            {
+                listTitle: 'Features',
+                links: [
+                    'Business Marketing',
+                    'User Analytic',
+                    'Live Chat',
+                    'Unlimited Support',
+                ],
+            },
+            {
+                listTitle: 'Resources',
+                links: ['IOS & Android', 'Watch a Demo', 'Customers', 'API'],
+            },
+        ],
+    }
+    createHTMLElement('footer', footerTemplate, footerObj, document.body)
 })
