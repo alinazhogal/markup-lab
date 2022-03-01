@@ -15,7 +15,7 @@
         .icon-container {
             width: 72px;
             height: 72px;
-            border-radius: 50px;
+            border-radius: 50%;
             background-color: #fff;
             @include flex($jc: center);
             margin-right: 15px;
