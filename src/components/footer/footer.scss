@@ -22,10 +22,19 @@ h5 {
 }
 .footer-top {
     @include flex();
-    margin: 53px 0;
+    margin: 54px 0;
     .social-media {
         @include flex();
         width: 156px;
+    }
+    @media screen and (max-width: 650px) {
+        flex-direction: column;
+        margin: 53px 0 40px;
+        align-items: start;
+        width: 361px;
+        .logo {
+            padding-bottom: 63px;
+        }
     }
 }
 hr {
@@ -35,11 +44,16 @@ hr {
     max-width: 1057px;
     width: 100%;
     margin: 0;
+    @media screen and (max-width: 650px) {
+        display: none;
+    }
 }
 .footer-main {
     @include flex($ai: flex-start);
-    margin: 70px 0;
+    margin: 70px 0 40px;
     .list {
+        width: 150px;
+        margin-bottom: 30px;
         ul {
             margin: 0;
             list-style: none;
@@ -53,6 +67,10 @@ hr {
                 color: #bdbdbd;
                 font-size: 14px;
                 line-height: 24px;
+                transition: 300ms ease-out;
+            }
+            li a:hover {
+                color: $secondary-color;
             }
         }
     }
@@ -82,6 +100,10 @@ hr {
                 height: 58px;
                 padding: 0;
                 font-weight: 400;
+                transition: 300ms ease-out;
+            }
+            button:hover {
+                @include button-hover();
             }
         }
         p {
@@ -90,6 +112,13 @@ hr {
             font-size: 12px;
             line-height: 28px;
             margin: 0;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        flex-direction: column;
+        width: 361px;
+        .subscribe {
+            margin-bottom: 30px;
         }
     }
 }
@@ -109,7 +138,14 @@ hr {
         padding: 0 20px;
         width: 100%;
     }
+    @media screen and (max-width: 650px) {
+        h6 {
+            text-align: center;
+            margin: 25px 0 49px;
+        }
+    }
 }
+
 input:focus {
     outline: none;
 }
