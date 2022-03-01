@@ -6,19 +6,22 @@
     <a href="/" aria-label="twitter link"><img src="../../img/footer-twitter.svg" alt="twitter"></a>
     <a href="/" aria-label="youtube link"><img src="../../img/footer-youtube.svg" alt="youtube"></a>
   </div>
-  <hr>
+ 
 </div>
+ <hr>
 <div class="footer-main">
-  <div class="list">
+
   {{#lists}}
+    <div class="list">
   <h5>{{listTitle}}</h5>
   <ul>
     {{#links}}
     <li><a href="/" aria-label="{{this}} link">{{this}}</a></li>
     {{/links}}
   </ul>
+  </div>
   {{/lists}}
-</div>
+
 <div class="subscribe">
   <h5>Get In Touch</h5>
   <form >
@@ -26,6 +29,7 @@
     <button>Subscribe</button>
   </form>
   <p>Lorem impsum dolor amit</p>
+</div>
 </div>
 </div>
 <div class="footer-bottom">
