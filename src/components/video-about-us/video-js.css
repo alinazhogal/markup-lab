@@ -692,6 +692,7 @@ body.vjs-full-window {
     margin: 0;
     transition: all 0.4s;
 }
+
 .vjs-menu-button-inline.vjs-slider-active .vjs-menu,
 .vjs-menu-button-inline:focus .vjs-menu,
 .vjs-menu-button-inline:hover .vjs-menu {

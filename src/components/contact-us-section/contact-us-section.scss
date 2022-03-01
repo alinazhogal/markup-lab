@@ -3,7 +3,7 @@
 .contact-us {
     @include flex();
     flex-direction: column;
-    background: url('/src/img/contactsbg.png') no-repeat;
+    background: url(/src/img/contact-us-bg.webp) no-repeat;
     background-size: cover;
     max-width: 1440px;
     @media screen and (min-width: 1440px) {

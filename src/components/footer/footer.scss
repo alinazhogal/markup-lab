@@ -24,6 +24,10 @@ h5 {
     @include flex();
     margin: 54px 0;
     .social-media {
+        a img {
+            width: 24px;
+            height: 24px;
+        }
         @include flex();
         width: 156px;
     }
