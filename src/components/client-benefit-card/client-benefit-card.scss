@@ -19,6 +19,10 @@
             background-color: #fff;
             @include flex($jc: center);
             margin-right: 15px;
+            img {
+                width: 32px;
+                height: 32px;
+            }
         }
     }
     h5 {

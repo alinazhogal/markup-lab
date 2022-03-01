@@ -27,62 +27,62 @@ function createHTMLElement(element, template, templateObj, placeToAppend) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const headerObj = {
-        sectionName: [
-            { name: 'Home', url: '/home' },
-            { name: 'Product', url: '/product' },
-            { name: 'Pricing', url: '/pricing' },
-            { name: 'Contact', url: '/contact' },
-        ],
-    }
-
     const header = createHTMLElement(
         'header',
         headerTemplate,
-        headerObj,
+        {
+            sectionName: [
+                { name: 'Home', url: '/home' },
+                { name: 'Product', url: '/product' },
+                { name: 'Pricing', url: '/pricing' },
+                { name: 'Contact', url: '/contact' },
+            ],
+        },
         document.body
     )
 
-    const topSection = createHTMLElement(
+    createHTMLElement(
         'section',
         topSectionTemplate,
         {},
         document.body
-    )
-    topSection.classList.add('top-section')
+    ).classList.add('top-section')
 
-    const topModalObj = {
-        input: [
-            {
-                label: 'Name',
-                type: 'text',
-                placeholder: 'Full Name',
-                id: 'name',
-            },
-            {
-                label: 'Email',
-                type: 'email',
-                placeholder: 'example@gmail.com',
-                id: 'email',
-            },
-        ],
-        select: [
-            {
-                label: 'Department',
-                name: 'department',
-                default: 'Please Select',
-                option: [{ value: 'Dep' }, { value: 'Dep2' }],
-            },
-            {
-                label: 'Time',
-                name: 'time',
-                default: '4:00 Available',
-                option: [{ value: 'Time' }, { value: 'Time2' }],
-            },
-        ],
-    }
-    const topSectionContainer = document.querySelector('.top-container')
-    createHTMLElement('div', topModalTemplate, topModalObj, topSectionContainer)
+    createHTMLElement(
+        'div',
+        topModalTemplate,
+        {
+            input: [
+                {
+                    label: 'Name',
+                    type: 'text',
+                    placeholder: 'Full Name',
+                    id: 'name',
+                },
+                {
+                    label: 'Email',
+                    type: 'email',
+                    placeholder: 'example@gmail.com',
+                    id: 'email',
+                },
+            ],
+            select: [
+                {
+                    label: 'Department',
+                    name: 'department',
+                    default: 'Please Select',
+                    option: [{ value: 'Dep' }, { value: 'Dep2' }],
+                },
+                {
+                    label: 'Time',
+                    name: 'time',
+                    default: '4:00 Available',
+                    option: [{ value: 'Time' }, { value: 'Time2' }],
+                },
+            ],
+        },
+        document.querySelector('.top-container')
+    )
 
     document.addEventListener('click', (e) => {
         const search = document.querySelectorAll('.nav-input')
@@ -152,151 +152,152 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('stop-scrolling')
     })
 
-    const clientMattersObj = {
-        benefitCard: [
-            {
-                headerName: 'Environmental',
-                learnLink: '/',
-                benefitIcon: environmentalBenefitIcon,
-                iconAlt: 'environmental benefit icon',
-                benefitsList: [
-                    { name: 'The best products start with Figma' },
-                    { name: 'Design with real data' },
-                    { name: 'Lightning fast prototyping' },
-                    { name: 'Fastest way to organize' },
-                    { name: 'Work at the speed of thought' },
-                ],
-            },
-            {
-                headerName: 'Save money and time',
-                learnLink: '/',
-                benefitIcon: saveMoneyBenefitIcon,
-                iconAlt: 'save money and time benefit icon',
-                benefitsList: [
-                    { name: 'The best products start with Figma' },
-                    { name: 'Design with real data' },
-                    { name: 'Lightning fast prototyping' },
-                    { name: 'Fastest way to organize' },
-                    { name: 'Work at the speed of thought' },
-                ],
-            },
-            {
-                headerName: 'Travel & Aviation ',
-                learnLink: '/',
-                benefitIcon: travelBenefitIcon,
-                iconAlt: 'travel and aviation benefit icon',
-                benefitsList: [
-                    { name: 'The best products start with Figma' },
-                    { name: 'Design with real data' },
-                    { name: 'Lightning fast prototyping' },
-                    { name: 'Fastest way to organize' },
-                    { name: 'Work at the speed of thought' },
-                ],
-            },
-        ],
-    }
     createHTMLElement(
         'section',
         clientMattersTemplate,
-        clientMattersObj,
+        {
+            benefitCard: [
+                {
+                    headerName: 'Environmental',
+                    learnLink: '/',
+                    benefitIcon: environmentalBenefitIcon,
+                    iconAlt: 'environmental benefit icon',
+                    benefitsList: [
+                        { name: 'The best products start with Figma' },
+                        { name: 'Design with real data' },
+                        { name: 'Lightning fast prototyping' },
+                        { name: 'Fastest way to organize' },
+                        { name: 'Work at the speed of thought' },
+                    ],
+                },
+                {
+                    headerName: 'Save money and time',
+                    learnLink: '/',
+                    benefitIcon: saveMoneyBenefitIcon,
+                    iconAlt: 'save money and time benefit icon',
+                    benefitsList: [
+                        { name: 'The best products start with Figma' },
+                        { name: 'Design with real data' },
+                        { name: 'Lightning fast prototyping' },
+                        { name: 'Fastest way to organize' },
+                        { name: 'Work at the speed of thought' },
+                    ],
+                },
+                {
+                    headerName: 'Travel & Aviation ',
+                    learnLink: '/',
+                    benefitIcon: travelBenefitIcon,
+                    iconAlt: 'travel and aviation benefit icon',
+                    benefitsList: [
+                        { name: 'The best products start with Figma' },
+                        { name: 'Design with real data' },
+                        { name: 'Lightning fast prototyping' },
+                        { name: 'Fastest way to organize' },
+                        { name: 'Work at the speed of thought' },
+                    ],
+                },
+            ],
+        },
         document.body
     )
 
-    const aboutUs = createHTMLElement(
+    createHTMLElement(
         'section',
         aboutUsTemplate,
         {},
         document.body
-    )
-    aboutUs.classList.add('about-us')
+    ).classList.add('about-us')
 
-    const reviewsObj = {
-        reviewCard: [
-            {
-                reviewText:
-                    'Slate helps you see how many more days you need to work to reach your financial goal.',
-                reviewer: {
-                    photo: reviewerPhoto1,
-                    name: 'Regina Miles',
-                    profession: 'Designer',
-                },
-            },
-            {
-                reviewText:
-                    'Slate helps you see how many more days you need to work to reach your financial goal.',
-                reviewer: {
-                    photo: reviewerPhoto1,
-                    name: 'Regina Miles',
-                    profession: 'Designer',
-                },
-            },
-            {
-                reviewText:
-                    'Slate helps you see how many more days you need to work to reach your financial goal.',
-                reviewer: {
-                    photo: reviewerPhoto1,
-                    name: 'Regina Miles',
-                    profession: 'Designer',
-                },
-            },
-        ],
-    }
-    const reviews = createHTMLElement(
+    createHTMLElement(
         'section',
         reviewsTemplate,
-        reviewsObj,
+        {
+            reviewCard: [
+                {
+                    reviewText:
+                        'Slate helps you see how many more days you need to work to reach your financial goal.',
+                    reviewer: {
+                        photo: reviewerPhoto1,
+                        name: 'Regina Miles',
+                        profession: 'Designer',
+                    },
+                },
+                {
+                    reviewText:
+                        'Slate helps you see how many more days you need to work to reach your financial goal.',
+                    reviewer: {
+                        photo: reviewerPhoto1,
+                        name: 'Regina Miles',
+                        profession: 'Designer',
+                    },
+                },
+                {
+                    reviewText:
+                        'Slate helps you see how many more days you need to work to reach your financial goal.',
+                    reviewer: {
+                        photo: reviewerPhoto1,
+                        name: 'Regina Miles',
+                        profession: 'Designer',
+                    },
+                },
+            ],
+        },
         document.body
-    )
-    reviews.classList.add('reviews')
+    ).classList.add('reviews')
 
-    const teamObj = {
-        teamMemberCard: [
-            { photo: teamPhoto1, name: 'Avie Beaton', role: 'CO Founder' },
-            { photo: teamPhoto2, name: 'Ben Jonson', role: 'Consultant' },
-            { photo: teamPhoto3, name: 'Ashley Fletcher', role: 'CEO' },
-        ],
-    }
-
-    const team = createHTMLElement(
+    createHTMLElement(
         'section',
         teamTemplate,
-        teamObj,
+        {
+            teamMemberCard: [
+                { photo: teamPhoto1, name: 'Avie Beaton', role: 'CO Founder' },
+                { photo: teamPhoto2, name: 'Ben Jonson', role: 'Consultant' },
+                { photo: teamPhoto3, name: 'Ashley Fletcher', role: 'CEO' },
+            ],
+        },
         document.body
-    )
-    team.classList.add('team')
+    ).classList.add('team')
 
-    const contactUs = createHTMLElement(
+    createHTMLElement(
         'section',
         contactUsTemplate,
         {},
         document.body
-    )
-    contactUs.classList.add('contact-us')
+    ).classList.add('contact-us')
 
-    const footerObj = {
-        lists: [
-            {
-                listTitle: 'Company Info',
-                links: ['About Us', 'Carrier', 'We are hiring', 'Blog'],
-            },
-            {
-                listTitle: 'Legal',
-                links: ['About Us', 'Carrier', 'We are hiring', 'Blog'],
-            },
-            {
-                listTitle: 'Features',
-                links: [
-                    'Business Marketing',
-                    'User Analytic',
-                    'Live Chat',
-                    'Unlimited Support',
-                ],
-            },
-            {
-                listTitle: 'Resources',
-                links: ['IOS & Android', 'Watch a Demo', 'Customers', 'API'],
-            },
-        ],
-    }
-    createHTMLElement('footer', footerTemplate, footerObj, document.body)
+    createHTMLElement(
+        'footer',
+        footerTemplate,
+        {
+            lists: [
+                {
+                    listTitle: 'Company Info',
+                    links: ['About Us', 'Carrier', 'We are hiring', 'Blog'],
+                },
+                {
+                    listTitle: 'Legal',
+                    links: ['About Us', 'Carrier', 'We are hiring', 'Blog'],
+                },
+                {
+                    listTitle: 'Features',
+                    links: [
+                        'Business Marketing',
+                        'User Analytic',
+                        'Live Chat',
+                        'Unlimited Support',
+                    ],
+                },
+                {
+                    listTitle: 'Resources',
+                    links: [
+                        'IOS & Android',
+                        'Watch a Demo',
+                        'Customers',
+                        'API',
+                    ],
+                },
+            ],
+        },
+        document.body
+    )
 })
