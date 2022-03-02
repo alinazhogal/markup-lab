@@ -270,33 +270,32 @@ document.addEventListener('DOMContentLoaded', () => {
             inputContainer.classList.toggle('input-mob-container-open')
         }
 
-        const mobileMenu = document.querySelector('.mobile-menu')
         if (!(target.closest('.nav-list') || target.closest('#burger-btn'))) {
-            mobileMenu.classList.remove('mobile-menu-open')
+            document
+                .querySelector('.mobile-menu')
+                .classList.remove('mobile-menu-open')
         }
         if (target.closest('#burger-btn')) {
-            mobileMenu.classList.toggle('mobile-menu-open')
+            document
+                .querySelector('.mobile-menu')
+                .classList.toggle('mobile-menu-open')
         }
     })
 
     window.addEventListener('scroll', () => {
-        const scrollY = window.pageYOffset
-        if (scrollY) {
+        if (window.pageYOffset) {
             header.classList.add('scrolled')
         } else header.classList.remove('scrolled')
     })
 
-    const topAppointButton = document.querySelector('#book-appoint-top')
-    const topModal = document.querySelector('.modal')
-
-    topAppointButton.addEventListener('click', () => {
-        topModal.classList.toggle('modal-open')
-        document.body.classList.add('stop-scrolling')
-    })
-    const closeModalBut = document.querySelector('#close-modal')
-
-    closeModalBut.addEventListener('click', () => {
-        topModal.classList.remove('modal-open')
+    document
+        .querySelector('#book-appoint-top')
+        .addEventListener('click', () => {
+            document.querySelector('.modal').classList.toggle('modal-open')
+            document.body.classList.add('stop-scrolling')
+        })
+    document.querySelector('#close-modal').addEventListener('click', () => {
+        document.querySelector('.modal').classList.remove('modal-open')
         document.body.classList.remove('stop-scrolling')
     })
 })

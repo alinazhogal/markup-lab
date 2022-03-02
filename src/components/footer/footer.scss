@@ -12,13 +12,14 @@ footer {
     flex-wrap: wrap;
 }
 
-h5 {
+footer h5 {
     margin: 0;
     color: #fff;
     @include font($fw: 700);
     font-size: 16px;
     line-height: 24px;
     padding-bottom: 20px;
+    letter-spacing: 0.1px;
 }
 .footer-top {
     @include flex();
@@ -71,6 +72,7 @@ hr {
                 color: #bdbdbd;
                 font-size: 14px;
                 line-height: 24px;
+                letter-spacing: 0.2px;
                 transition: 300ms ease-out;
             }
             li a:hover {
@@ -91,6 +93,7 @@ hr {
                 @include font($fw: 500);
                 line-height: 28px;
                 height: 58px;
+                letter-spacing: 0.2px;
             }
             input::placeholder {
                 color: #bdbdbd;
@@ -104,7 +107,6 @@ hr {
                 height: 58px;
                 padding: 0;
                 font-weight: 400;
-                transition: 300ms ease-out;
             }
             button:hover {
                 @include button-hover();
@@ -115,6 +117,7 @@ hr {
             @include font($fw: 400);
             font-size: 12px;
             line-height: 28px;
+            letter-spacing: 0.2px;
             margin: 0;
         }
     }
@@ -140,6 +143,7 @@ hr {
         margin: 25px 0;
         max-width: 1050px;
         padding: 0 20px;
+        letter-spacing: 0.2px;
         width: 100%;
     }
     @media screen and (max-width: 650px) {
