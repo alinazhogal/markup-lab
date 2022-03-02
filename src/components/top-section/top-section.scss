@@ -32,15 +32,18 @@
         margin: 0;
         margin-bottom: 35px;
         line-height: 140%;
+        letter-spacing: 0.2px;
     }
 
     h4 {
-        @include font($fw: 500);
         font-size: 20px;
         line-height: 150%;
         letter-spacing: 0.2px;
         margin: 0;
         margin-bottom: 35px;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        width: 376px;
     }
 
     button {
@@ -70,9 +73,12 @@ section button:hover {
             text-align: center;
             @include font($fw: 700);
             font-size: 40px;
+            width: 300px;
+            height: 180px;
         }
         h4 {
             text-align: center;
+            width: 230px;
         }
     }
 }
