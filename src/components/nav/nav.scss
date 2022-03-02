@@ -126,6 +126,11 @@ li a:hover {
         a {
             margin-left: 24px;
         }
+        button img,
+        a img {
+            width: 20px;
+            height: 20px;
+        }
     }
     #search-btn-mob {
         padding-right: 0;
