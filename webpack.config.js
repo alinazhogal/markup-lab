@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -9,6 +10,9 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+    },
+    optimization: {
+        minimizer: [new UglifyJsPlugin()],
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -22,6 +26,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin({
             cache: false,
         }),
+        new UglifyJsPlugin(),
     ],
     module: {
         rules: [
