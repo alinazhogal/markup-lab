@@ -7,6 +7,11 @@
     background-size: cover;
     max-width: 1440px;
 
+    @media screen and (min-width: 700px) {
+        background: url(/src/img/contact-us-bg.webp) no-repeat;
+        background-size: cover;
+    }
+
     @media screen and (min-width: 1440px) {
         margin: 0 auto;
     }
@@ -57,7 +62,7 @@
 
 @media screen and (max-width: 700px) {
     .contact-us {
-        background: url(/src/img/background3.webp) no-repeat;
+        background: url(/src/img/contact-bg-mob.webp) no-repeat;
         background-size: cover;
         .section-content {
             align-items: center;

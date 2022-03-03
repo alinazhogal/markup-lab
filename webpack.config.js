@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -12,7 +13,7 @@ module.exports = {
         clean: true,
     },
     optimization: {
-        minimizer: [new UglifyJsPlugin()],
+        minimizer: [new UglifyJsPlugin(), new CssMinimizerPlugin()],
     },
     devtool: 'inline-source-map',
     devServer: {
