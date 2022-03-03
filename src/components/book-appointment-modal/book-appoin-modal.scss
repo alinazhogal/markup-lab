@@ -63,6 +63,8 @@
 
         select {
             appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
             background-color: $background-input;
             border: 1px solid $border-input;
             color: $text-color;
