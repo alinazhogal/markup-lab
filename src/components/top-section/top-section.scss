@@ -1,11 +1,13 @@
 @import '../../style-rules';
 
 .top-section {
-    background: url(/src/img/background.webp) no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
     max-width: 1440px;
+    @media screen and (min-width: 600px) {
+        background: url(/src/img/background.webp) no-repeat;
+        background-size: cover;
+    }
     @media screen and (min-width: 1440px) {
         margin: 0 auto;
     }
@@ -49,7 +51,6 @@
     button {
         @include button();
         width: 216px;
-        padding: 10px 36px;
         height: 48px;
         border-radius: 30px;
     }
@@ -60,6 +61,10 @@ section button:hover {
 }
 
 @media screen and (max-width: 600px) {
+    .top-section {
+        background: url(/src/img/top-section-mobile.webp) no-repeat;
+        background-size: cover;
+    }
     .top-container {
         margin: 184px 59px 850px 59px;
         justify-content: center;

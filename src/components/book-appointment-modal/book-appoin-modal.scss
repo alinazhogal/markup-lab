@@ -57,8 +57,8 @@
         }
 
         .input-container {
-            display: flex;
             flex-direction: column;
+            display: none;
         }
 
         select {
@@ -88,6 +88,7 @@
             border-radius: 5px;
             @include button();
             margin-top: 15px;
+            display: none;
         }
     }
 }
@@ -99,6 +100,14 @@
 .modal-open {
     transition: 300ms ease-out;
     opacity: 1;
+    form {
+        .input-container {
+            display: flex;
+        }
+        button {
+            display: block;
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {
