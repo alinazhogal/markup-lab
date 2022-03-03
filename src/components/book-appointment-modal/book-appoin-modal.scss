@@ -53,6 +53,8 @@
         }
 
         input::placeholder {
+            color: $text-color-second;
+            opacity: 1;
             @include font($fw: 500);
         }
 
@@ -134,7 +136,7 @@
     }
 
     .modal-open {
-        z-index: 1000;
+        z-index: 100000;
         transition: 300ms ease-out;
     }
 
