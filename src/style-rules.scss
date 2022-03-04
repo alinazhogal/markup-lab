@@ -14,7 +14,7 @@ $text-color: #17213c;
 }
 
 @mixin font($fw: 500) {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-weight: $fw;
 }
 

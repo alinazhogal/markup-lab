@@ -53,6 +53,8 @@
         }
 
         input::placeholder {
+            color: $text-color-second;
+            opacity: 1;
             @include font($fw: 500);
         }
 
