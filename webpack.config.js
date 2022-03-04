@@ -5,7 +5,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = {
-    target: ['es5', 'web'],
     mode: 'development',
     entry: './src/index.js',
     output: {
@@ -32,13 +31,6 @@ module.exports = {
     ],
     module: {
         rules: [
-            {
-                test: /\.js$/,
-                exclude: /(node_modules)/,
-                use: {
-                    loader: 'babel-loader',
-                },
-            },
             {
                 test: /\.s[ac]ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
